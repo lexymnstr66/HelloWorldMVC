@@ -2,8 +2,8 @@ plugins {
     id("java")
 }
 
-group = "org.example"
-version = "1.0-SNAPSHOT"
+group = "helloworldmvc"
+version = "0.0.1"
 
 repositories {
     mavenCentral()
@@ -12,6 +12,9 @@ repositories {
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
+    implementation project(':controller')
+    implementation project(':view')
+    implementation project(':model')
 }
 
 tasks.test {
